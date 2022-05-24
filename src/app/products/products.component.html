@@ -1,0 +1,13 @@
+<div class="container">
+  <nav aria-label="products pages">
+    <div class="button-container">
+      <button routerLink="./main">Main</button>
+      <button routerLink="./more-info" class="mr-2">More Info</button>
+      <input #id size="6" />
+      <button class="ml-2" (click)="goToProduct(id.value)">Go</button>
+    </div>
+  </nav>
+</div>
+<div class="products-area">
+  <router-outlet></router-outlet>
+</div>

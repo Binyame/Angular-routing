@@ -1,0 +1,19 @@
+<div class="page-header">
+  <div class="container">
+    <nav>
+      <h1>Child Routes, Route Guards, &#38; LocalStorage Authentication</h1>
+      <div class="button-container">
+        <button routerLink="/home">Home</button>
+        <button routerLink="/products">Products</button>
+        <button routerLink="/about">About</button>
+        <button routerLink="/contact">Contact</button>
+        <button routerLink="/protected">Protected</button>
+        <button *ngIf="authService.getUser()" routerLink="/home" (click)="logout()">Log out</button>
+      </div>
+      <br class="clear" />
+    </nav>
+  </div>
+</div>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
